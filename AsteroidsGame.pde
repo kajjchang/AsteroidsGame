@@ -20,7 +20,7 @@ public color starColor() {
 
 public void setup() {
   size(750, 750);
-  myShip = new Spaceship(color(0, 0, 255), 10, 10, 45);
+  myShip = new Spaceship(color(0, 0, 255, 100), 10, 10, 45);
   floaters.add(myShip);
   for (int i = 0; i < 500; i++) {
     stars.add(new Star(random(GAME_SIZE), random(GAME_SIZE), starColor(), random(10, 15)));
@@ -65,6 +65,16 @@ public void draw() {
   }
   
   translate(xTrans, yTrans);
+  
+  if (true) {
+    push();
+    fill(255, 0, 0, 100);
+    rect(0, 0, GAME_SIZE, 50);
+    rect(GAME_SIZE - 50, 50, 50, GAME_SIZE - 100);
+    rect(0, 50, 50, GAME_SIZE - 100);
+    rect(0, GAME_SIZE - 50, GAME_SIZE, 50);
+    pop();
+  }
   
   for (Star star : stars) {
     star.show();

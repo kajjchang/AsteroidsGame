@@ -29,6 +29,7 @@ class Spaceship extends Floater {
   
   public void show() {
     push();
+    strokeWeight(5);
     super.show();
     pop();
   }
