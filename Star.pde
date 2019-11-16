@@ -1,8 +1,8 @@
 class Star {
-  float x, y, size;
-  color col;
+  private float x, y, size;
+  private color col;
 
-  Star(float x, float y, color col, float size) {
+  public Star(float x, float y, color col, float size) {
     this.x = x;
     this.y = y;
     
@@ -13,7 +13,7 @@ class Star {
   
   public void show() {
     noStroke();
-    fill(col, 100);
+    fill(col);
     ellipse(x, y, size, size);
   }
 }
